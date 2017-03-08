@@ -1,0 +1,65 @@
+Roky (2016-12-07 20:56) : Shell>/bin/ls -la
+total 184
+drwxrwxrwx 1 roky roky   4096 Dec  7 20:49 .
+drwxrwxrwx 1 roky roky    376 Dec  7 20:41 ..
+-rwxrwxrwx 1 roky roky   1826 Dec  7 19:40 header.h
+drwxrwxrwx 1 roky roky   4096 Dec  7 11:12 Image
+-rwxrwxrwx 1 roky roky  13088 Dec  7 20:46 newshell
+-rwxrwxrwx 1 roky roky 129049 Dec  7 13:13 Report.docx
+-rwxrwxrwx 1 roky roky      0 Dec  7 20:49 screen.log
+-rwxrwxrwx 1 roky roky  13088 Dec  7 20:41 shell
+-rwxrwxrwx 1 roky roky  10617 Dec  7 19:40 Shell.c
+
+Roky (2016-12-07 21:01) : Shell> /usr/bin/whereis gcc
+gcc: /usr/bin/gcc /usr/lib/gcc /usr/share/man/man1/gcc.1.gz
+
+Roky (2016-12-07 21:01) : Shell> /usr/bin/pwd
+/usr/bin/pwd: Command not found. Please try again
+
+Roky (2016-12-07 21:02) : Shell> /bin/pwd
+/media/roky/093918EC093918EC/OS/Final report
+
+Roky (2016-12-07 21:05) : Shell> /usr/bin/gcc -o newshell Shell.c
+
+Roky (2016-12-07 21:06) : Shell> ./newshell
+
+Roky (2016-12-07 21:07) : Shell> exit
+exit
+^ZJob [1] (3733) stopped by signal: Stopped
+
+Roky (2016-12-07 21:08) : Shell> /bin/sleep 20
+
+Roky (2016-12-07 21:08) : Shell> /bin/sleep 20 &
+Jobid-->[2], Processid-->(4075) Job-->/bin/sleep 20 &
+
+Roky (2016-12-07 21:09) : Shell> /bin/sleep 20 &
+Jobid-->[1], Processid-->(4521) Job-->/bin/sleep 20 &
+Roky (2016-12-07 21:09) : Shell> /bin/ps
+  PID TTY          TIME CMD
+ 2428 pts/0    00:00:00 bash
+ 4516 pts/0    00:00:00 shell
+ 4521 pts/0    00:00:00 sleep
+ 4522 pts/0    00:00:00 ps
+
+Roky (2016-12-07 21:10) : shell> /bin/sleep 20 &
+job id-->[1],process id-->(5589) /bin/sleep 20 &
+Roky (2016-12-07 21:10) : shell> fg %1
+
+Roky (2016-12-07 21:13) : shell> /bin/sleep 20
+^CJob [0] (5592) terminated by signal: Interrupt
+
+Roky (2016-12-07 21:13) : shell> /bin/ps    
+  PID TTY          TIME CMD
+ 5578 pts/0    00:00:00 bash
+ 5588 pts/0    00:00:00 shell
+ 5864 pts/0    00:00:00 ps
+
+Roky (2016-12-07 21:15) : shell> /bin/sleep 20
+^ZJob [1] (5866) stopped by signal: Stopped
+Roky (2016-12-07 21:15) : shell> 
+
+
+
+
+
+
